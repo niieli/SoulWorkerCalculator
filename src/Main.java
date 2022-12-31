@@ -47,7 +47,7 @@ class Main {
                 result = temp * number2;
                 result = result / 60;
                 System.out.println("Required pieces: "+ number1 + "\nRequired Runs: " + temp + " with an average of '" + number3 + "' drops per run");
-                System.out.println("Required time to farm: " + result + " with an average of '" + number2 + "' seconds");
+                System.out.println("Required time to farm: " + result + " minutes, with an average of '" + number2 + "' seconds per run");
                 if(gear==1){
                     System.out.println("Required powder: 498(Flower) & 960(Citrus)");
                 }
