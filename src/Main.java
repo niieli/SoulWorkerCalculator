@@ -1,11 +1,13 @@
+import java.util.Random;
 import java.util.Scanner;
 
 class Main {
     public static void main(String[] args) {
 
+        Random rnd = new Random();
         char operator;
 
-        double number1, number2, number3, cry, result, temp;
+        double number1, number2, number3, cry, result, temp, zenny;
         Scanner input = new Scanner(System.in);
 
         //TF oder BS Gear berechnen
@@ -55,9 +57,10 @@ class Main {
                 temp = number1 / number3;
                 result = temp * number2;
                 result = result / 60;
+                zenny = temp * rnd.nextInt(50000)+ 100000;
                 System.out.println("Required crystals: " + number1 / 10 + "\nRequired pieces: " + number1 + "\nRequired Runs: " + temp + " with an average of '" + number3 + "' drops per run");
                 System.out.println("Required time to farm: " + result + " minutes, with an average of '" + number2 + "' seconds per run");
-                System.out.println("Required powder: 498(Flower) & 960(Citrus)");
+                System.out.println("Required powder: 498(Flower) & 960(Citrus)\nApproximately earned Zenny: " + zenny);
             }
             case '2' -> {
                 //Berechnen
@@ -65,27 +68,30 @@ class Main {
                 temp = number1 / number3;
                 result = temp * number2;
                 result = result / 60;
+                zenny = temp * rnd.nextInt(50000)+ 100000;
                 System.out.println("Required crystals: " + number1 / 10 + "\nRequired pieces: " + number1 + "\nRequired Runs: " + temp + " with an average of '" + number3 + "' drops per run");
                 System.out.println("Required time to farm: " + result + " minutes, with an average of '" + number2 + "' seconds per run");
-                System.out.println("Required powder: 210(Flower) & 480(Citrus)");
+                System.out.println("Required powder: 210(Flower) & 480(Citrus)\nApproximately earned Zenny: " + zenny);
             }
             case '3' -> {
                 number1 = number1 * 10;
                 temp = number1 / number3;
                 result = temp * number2;
                 result = result / 60;
+                zenny = temp * rnd.nextInt(50000)+ 100000;
                 System.out.println("Required crystals: " + number1 / 10 + "\nRequired pieces: " + number1 + "\nRequired Runs: " + temp + " with an average of '" + number3 + "' drops per run");
                 System.out.println("Required time to farm: " + result + " minutes, with an average of '" + number2 + "' seconds per run");
-                System.out.println("Required powder: 210(Flower) & 0(Citrus)");
+                System.out.println("Required powder: 210(Flower) & 0(Citrus)\nApproximately earned Zenny: " + zenny);
             }
             case '4' -> {
                 number1 = number1 * 10;
                 temp = number1 / number3;
                 result = temp * number2;
                 result = result / 60;
+                zenny = temp * rnd.nextInt(50000)+ 100000;
                 System.out.println("Required crystals: " + number1 / 10 + "\nRequired pieces: " + number1 + "\nRequired Runs: " + temp + " with an average of '" + number3 + "' drops per run");
                 System.out.println("Required time to farm: " + result + " minutes, with an average of '" + number2 + "' seconds per run");
-                System.out.println("Required powder: 288(Flower) & 480(Citrus)");
+                System.out.println("Required powder: 288(Flower) & 480(Citrus)\nApproximately earned Zenny: " + zenny);
             }
         }
     }
