@@ -142,7 +142,7 @@ class Main {
                 //How much fluid is needed
                 int temp = number1;
                 number1 = number1 / 7500;
-                number3 = (int)Math.floor(Math.random()*(170-120+1)+120);
+                number3 = (int)Math.floor(Math.random()*(165-125+1)+125);
                 runs = number1 / number3;
                 result = runs * number2;
                 result = result / 60;
