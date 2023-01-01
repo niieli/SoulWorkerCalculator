@@ -149,7 +149,7 @@ class Main {
                 result2 = result / 60;
                 zenny = (int)Math.floor(Math.random()*(155000-110000+1)+110000);
                 zenny = zenny * runs;
-                System.out.println("Required Fluid: " + number1 + "\nRequired Runs: " + runs + " with an average of '" + number3 + "' drops per run");
+                System.out.println("Required Mysterious Fluid: " + number1 + "\nRequired Runs: " + runs + " with an average of '" + number3 + "' drops per run");
                 System.out.println("Required time to farm: " + result + " minutes, " + result2+" hours with an average of '" + number2 + "' seconds per run");
                 System.out.println("Approximate Zenny gain: " + zenny + "\nEnd result: " + temp +" + "+ zenny + " = " + (zenny +temp));
             }
