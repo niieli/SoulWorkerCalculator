@@ -46,7 +46,7 @@ class Main {
                 number1 = input.nextInt();
         } else {
             number1 = 0;
-            System.err.println("Something went wrong. There is no type " + operator);
+            System.err.println("Something went wrong. There is no type " + operator+"!");
             System.exit(0);
         }
 
