@@ -1,6 +1,13 @@
 import java.util.Scanner;
 
 class Main {
+    public static final String RESET = "\u001B[0m";
+    public static final String YELLOW = "\u001B[33m";
+    public static final String BLACK = "\u001B[30m";
+    public static final String WHITE = "\u001B[37m";
+    public static final String BLACK_BACKGROUND = "\u001B[40m";
+    public static final String WHITE_BACKGROUND = "\u001B[47m";
+    public static final String YELLOW_BACKGROUND = "\u001B[43m";
     public static void main(String[] args) {
 
         char operator;
@@ -9,15 +16,15 @@ class Main {
         Scanner input = new Scanner(System.in);
 
         //TF oder BS Gear berechnen
-        System.out.println("Tragic Fairy & Dawn of Fate only. More coming soon!");
+        System.out.println("Tragic Fairy & Dawn of Fate only. More coming soon!\n");
         System.out.println("""
                 Choose your desired need.
                 Type '1': Tragic Fairy full gear
                 Type '2': Tragic Fairy full gear without accessories
                 Type '3': Tragic Fairy Weapon only
                 Type '4': Tragic Fairy Accessories
-                Type '5': Tragic Fairy Gear only
-                Type '6': Dawn of Fate farming""");
+                Type '5': Tragic Fairy Gear only\n"""+ YELLOW_BACKGROUND + BLACK +"""
+                Type '6': Dawn of Fate farming"""+ RESET);
         operator = input.next().charAt(0);
 
         if (operator!='6') {
@@ -151,7 +158,7 @@ class Main {
                 zenny = zenny * runs;
                 System.out.println("Required Mysterious Fluid: " + number1 + "\nRequired Runs: " + runs + " with an average of '" + number3 + "' drops per run");
                 System.out.println("Required time to farm: " + hours + " hour(s), " + minutes+" minutes with an average of '" + number2 + "' seconds per run");
-                System.out.println("Approximate Zenny gain: " + zenny + "\nEnd seconds: " + temp +" + "+ zenny + " = " + (zenny +temp));
+                System.out.println("Approximate Zenny gain: " + zenny + "\nEnd result: " + temp +" + "+ zenny + " = " + (zenny +temp));
             }
         }
     }
