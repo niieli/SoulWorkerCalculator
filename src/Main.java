@@ -12,7 +12,7 @@ class Main {
 
         char operator;
 
-        int number1, number2, number3, cry, seconds, runs, zenny, cost, hours, minutes;
+        int number1, number2, number3, cry, seconds, runs, zenny, cost, hours, minutes, sec;
         Scanner input = new Scanner(System.in);
 
         //TF oder BS Gear berechnen
@@ -33,7 +33,6 @@ class Main {
         } else {
             cry=0;
         }
-
 
         if(cry==1){
             System.out.println("\nHow many 'Crystals' do you need?");
@@ -83,12 +82,13 @@ class Main {
                 number1 = number1 * 10;
                 runs = number1 / number3;
                 seconds = runs * number2;
+                sec = seconds % 60;
                 minutes = seconds % 3600 / 60;
                 hours = seconds % 86400 / 3600;
                 zenny = (int)Math.floor(Math.random()*(155000-110000+1)+110000);
                 zenny = zenny * runs;
                 System.out.println("Required crystals: " + number1 / 10 + "\nRequired pieces: " + number1 + "\nRequired Runs: " + runs + " with an average of '" + number3 + "' drops per run");
-                System.out.println("Required time to farm: " + hours + " hour(s), " + minutes+" minutes with an average of '" + number2 + "' seconds per run");
+                System.out.println("Required time to farm: " + hours + " hour(s), " + minutes+" minutes and " + sec+" seconds with an average of '" + number2 + "' seconds per run");
                 System.out.println("Required powder: 498(Flower) & 960(Citrus)\nRequired Zenny for crafting(Crystals + Gear): "+cost+"\nApproximate Zenny gain: " + zenny);
             }
             case '2' -> {
@@ -97,12 +97,13 @@ class Main {
                 number1 = number1 * 10;
                 runs = number1 / number3;
                 seconds = runs * number2;
+                sec = seconds % 60;
                 minutes = seconds % 3600 / 60;
                 hours = seconds % 86400 / 3600;
                 zenny = (int)Math.floor(Math.random()*(155000-110000+1)+110000);
                 zenny = zenny * runs;
                 System.out.println("Required crystals: " + number1 / 10 + "\nRequired pieces: " + number1 + "\nRequired Runs: " + runs + " with an average of '" + number3 + "' drops per run");
-                System.out.println("Required time to farm: " + hours + " hour(s), " + minutes+" minutes with an average of '" + number2 + "' seconds per run");
+                System.out.println("Required time to farm: " + hours + " hour(s), " + minutes+" minutes and " + sec+" seconds with an average of '" + number2 + "' seconds per run");
                 System.out.println("Required powder: 210(Flower) & 480(Citrus)\nRequired Zenny for crafting(Crystals + Gear): "+cost+"\nApproximate Zenny gain: " + zenny);
             }
             case '3' -> {
@@ -110,12 +111,13 @@ class Main {
                 number1 = number1 * 10;
                 runs = number1 / number3;
                 seconds = runs * number2;
+                sec = seconds % 60;
                 minutes = seconds % 3600 / 60;
                 hours = seconds % 86400 / 3600;
                 zenny = (int)Math.floor(Math.random()*(155000-110000+1)+110000);
                 zenny = zenny * runs;
                 System.out.println("Required crystals: " + number1 / 10 + "\nRequired pieces: " + number1 + "\nRequired Runs: " + runs + " with an average of '" + number3 + "' drops per run");
-                System.out.println("Required time to farm: " + hours + " hour(s), " + minutes+" minutes with an average of '" + number2 + "' seconds per run");
+                System.out.println("Required time to farm: " + hours + " hour(s), " + minutes+" minutes and " + sec+" seconds with an average of '" + number2 + "' seconds per run");
                 System.out.println("Required powder: 210(Flower) & 0(Citrus)\nRequired Zenny for crafting(Crystals + Gear): "+cost+"\nApproximate Zenny gain: " + zenny);
             }
             case '4' -> {
@@ -123,12 +125,13 @@ class Main {
                 number1 = number1 * 10;
                 runs = number1 / number3;
                 seconds = runs * number2;
+                sec = seconds % 60;
                 minutes = seconds % 3600 / 60;
                 hours = seconds % 86400 / 3600;
                 zenny = (int)Math.floor(Math.random()*(155000-110000+1)+110000);
                 zenny = zenny * runs;
                 System.out.println("Required crystals: " + number1 / 10 + "\nRequired pieces: " + number1 + "\nRequired Runs: " + runs + " with an average of '" + number3 + "' drops per run");
-                System.out.println("Required time to farm: " + hours + " hour(s), " + minutes+" minutes with an average of '" + number2 + "' seconds per run");
+                System.out.println("Required time to farm: " + hours + " hour(s), " + minutes+" minutes and " + sec+" seconds with an average of '" + number2 + "' seconds per run");
                 System.out.println("Required powder: 288(Flower) & 480(Citrus)\nRequired Zenny for crafting(Crystals + Gear): "+cost+"\nApproximate Zenny gain: " + zenny);
             }
             case '5' -> {
@@ -136,12 +139,13 @@ class Main {
                 number1 = number1 * 10;
                 runs = number1 / number3;
                 seconds = runs * number2;
+                sec = seconds % 60;
                 minutes = seconds % 3600 / 60;
                 hours = seconds % 86400 / 3600;
                 zenny = (int)Math.floor(Math.random()*(155000-110000+1)+110000);
                 zenny = zenny * runs;
                 System.out.println("Required crystals: " + number1 / 10 + "\nRequired pieces: " + number1 + "\nRequired Runs: " + runs + " with an average of '" + number3 + "' drops per run");
-                System.out.println("Required time to farm: " + hours + " hour(s), " + minutes+" minutes with an average of '" + number2 + "' seconds per run");
+                System.out.println("Required time to farm: " + hours + " hour(s), " + minutes+" minutes and " + sec+" seconds with an average of '" + number2 + "' seconds per run");
                 System.out.println("Required powder: 0(Flower) & 480(Citrus)\nRequired Zenny for crafting(Crystals + Gear): "+cost+"\nApproximate Zenny gain: " + zenny);
             }
             //Dawn of Fate
@@ -152,12 +156,13 @@ class Main {
                 number3 = (int)Math.floor(Math.random()*(160-120+1)+120);
                 runs = number1 / number3;
                 seconds = runs * number2;
+                sec = seconds % 60;
                 minutes = seconds % 3600 / 60;
                 hours = seconds % 86400 / 3600;
                 zenny = (int)Math.floor(Math.random()*(195000-172000+1)+172000);
                 zenny = zenny * runs;
                 System.out.println("Required Mysterious Fluid: " + number1 + "\nRequired Runs: " + runs + " with an average of '" + number3 + "' drops per run");
-                System.out.println("Required time to farm: " + hours + " hour(s), " + minutes+" minutes with an average of '" + number2 + "' seconds per run");
+                System.out.println("Required time to farm: " + hours + " hour(s), " + minutes+" minutes and " + sec+" seconds with an average of '" + number2 + "' seconds per run");
                 System.out.println("Approximate Zenny gain: " + zenny + "\nEnd result: " + temp +" + "+ zenny + " = " + (zenny +temp));
             }
         }
