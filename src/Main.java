@@ -16,9 +16,10 @@ class Main {
         Scanner input = new Scanner(System.in);
 
         //TF oder BS Gear berechnen
-        System.out.println("Tragic Fairy & Dawn of Fate only. More coming soon!\n");
+        System.out.println("Tragic Fairy, Dawn of Fate & Garden of Plenty. More coming soon!\n");
         System.out.println("""
                 Choose your desired need.
+                Type '0': Garden of Plenty(Gluton Zenny farm)
                 Type '1': Tragic Fairy full gear
                 Type '2': Tragic Fairy full gear without accessories
                 Type '3': Tragic Fairy Weapon only
@@ -27,7 +28,7 @@ class Main {
                 Type '6': Dawn of Fate farming"""+ RESET);
         operator = input.next().charAt(0);
 
-        if (operator!='6') {
+        if (operator!='6' && operator!='0') {
             System.out.println("\nDo you need a custom amount of 'Crystals'(1) or Default(0)?");
             cry = input.nextInt();
         } else {
@@ -47,7 +48,7 @@ class Main {
             number1 = 96;
         } else if (operator=='5') {
             number1 = 112;
-        } else if (operator=='6') {
+        } else if (operator=='6' || operator=='0') {
                 System.out.println("\nHow much Zenny do you need?");
                 number1 = input.nextInt();
         } else {
@@ -57,15 +58,17 @@ class Main {
         }
 
         //Avg. Zeit pro Run
-        if (operator!='6') {
+        if (operator!='6' && operator!='0') {
             System.out.println("\nWhat is your average time to complete 'Field of Raid' in Seconds?");
-        } else {
+        } else if (operator=='6'){
             System.out.println("\nWhat is your average time to complete 'Dawn of Fate' in Seconds?");
+        } else {
+            System.out.println("\nWhat is your average time to complete 'Garden of Plenty' in Seconds");
         }
         number2 = input.nextInt();
 
         //Avg. Droprate
-        if (operator!='6') {
+        if (operator!='6' && operator!='0') {
             System.out.println("\nHow many pieces do you expect per run?");
             number3 = input.nextInt();
         } else {
@@ -164,6 +167,22 @@ class Main {
                 System.out.println("Required Mysterious Fluid: " + number1 + "\nRequired Runs: " + runs + " with an average of '" + number3 + "' drops per run");
                 System.out.println("Required time to farm: " + hours + " hour(s), " + minutes+" minutes and " + sec+" seconds with an average of '" + number2 + "' seconds per run");
                 System.out.println("Approximate Zenny gain: " + zenny + "\nEnd result: " + temp +" + "+ zenny + " = " + (zenny +temp));
+            }
+            case '0' -> {
+                runs = number1 / 1137838;
+                zenny = runs * 1137838;
+                if (zenny < number1) {
+                    runs = runs + 1;
+                    zenny = runs * 1137838;
+                }
+                int exp = 20 * runs;
+                seconds = runs * number2;
+                sec = seconds % 60;
+                minutes = seconds % 3600 / 60;
+                hours = seconds % 86400 / 3600;
+                System.out.println("Required Runs: " + runs + " with an average of '" + number2 + "' seconds per run");
+                System.out.println("Required time to farm: " + hours + " hour(s), " + minutes + " minutes and " + sec + " seconds");
+                System.out.println("End result: " + zenny + " zenny and " + exp + " spirit exp");
             }
         }
     }
