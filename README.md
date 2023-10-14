@@ -9,4 +9,5 @@ Choose your option and enter your needs.
 
 # TODO
 
-Creating a GUI for easier use
+Creating a GUI for easier use.
+More functions(?)
