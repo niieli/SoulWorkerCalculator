@@ -3,9 +3,6 @@ import java.util.Scanner;
 
 class Main {
     public static void main(String[] args) {
-        Window win = new Window();
-        win.setBounds(800, 250, 540, 360);
-        win.show();
         char operator;
 
         int number1, number2, number3, cry, seconds, runs, zenny, cost, hours, minutes, sec, wep, armor, accs;
